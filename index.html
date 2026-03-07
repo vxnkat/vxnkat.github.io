@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vxnkat - Portfolio</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦ VXNKAT - Portfolio</div>
+
+    <nav>
+        <a href="#">About Me</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+    </nav>
+
+    <a class="call-btn" href="#">Book A Call ↗</a>
+</header>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+
+<!-- Tap Here Button -->
+
+     <div class="tap-panel">
+           Tap here
+ </div>
+
+<!-- Hero Section Starting -->
+
+<section class="hero">
+
+    <div class="side-text left">——————————————Product Designer</div>
+    <div class="side-text right">Let this is ur first join up!get in touch</div>
+
+    <div class="hero-left">
+
+        <div class="stats">
+            <div>
+                <h2>+200</h2>
+                <p>Project completed</p>
+            </div>
+
+            <div>
+                <h2>+50</h2>
+                <p>Startup raised</p>
+            </div>
+        </div>
+
+        <h1>Hello</h1>
+
+        <p class="sub">———— It's D'Nova a design wizard</p>
+
+        <div class="scroll">Scroll down ↓</div>
+
+    </div>
+
+
+    <div class="hero-right">
+        <img src="assets/images/index-background.jpg">
+    </div>
+
+</section>
+
+<!-- Hero Section Ending -->
+
+<!-- Skills Section Starting -->
+
+<section class="skills">
+
+<div class="skills-container">
+
+<h2>My Skills</h2>
+
+<div class="skill">
+<span>HTML</span>
+<div class="progress">
+<div class="progress-bar" data-width="67%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>CSS</span>
+<div class="progress">
+<div class="progress-bar" data-width="90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>JavaScript</span>
+<div class="progress">
+<div class="progress-bar" data-width="80%"></div>
+</div>
+</div>
+
+<div class="skill">
+<span>UI / UX Design</span>
+<div class="progress">
+<div class="progress-bar" data-width="85%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- Some more helps for bar-->
+
+<script>
+
+const bars = document.querySelectorAll(".progress-bar");
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+const bar = entry.target;
+const value = bar.getAttribute("data-width");
+
+if(entry.isIntersecting){
+
+bar.style.width = value;
+bar.style.opacity = "1";
+
+}else{
+
+bar.style.width = "0";
+bar.style.opacity = "0";
+
+}
+
+});
+
+},{threshold:0.4});
+
+bars.forEach(bar => observer.observe(bar));
+
+</script>
+
+<!-- Skills Section Ending -->
+
+</body>
+</html>
