@@ -319,6 +319,9 @@ body {
         flex-direction: column;
         gap: 20px;
     }
+    .nav {
+        top: 60px;
+    }
 }
 
 /* ANNOUNCE MENT PART*/
@@ -630,6 +633,7 @@ padding-right:12px;
         top: 15px;
         left: 20px;
     }
+    
 }
 
 
