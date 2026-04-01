@@ -3,16 +3,14 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    overflow: hidden;
-    background: radial-gradient(circle at center, #0a0a0a, #050505);
+    z-index: -1; /* 👈 important */
 }
 
 /* Blobs */
 .blob {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     filter: blur(100px);
     opacity: 0.2;
@@ -20,8 +18,8 @@
 }
 
 .b1 { background: #d9ff00; top: 10%; left: 20%; }
-.b2 { background: #00e0ff; top: 60%; left: 70%; }
-.b3 { background: #ff00c8; top: 40%; left: 40%; }
+.b2 { background: #0084ff; top: 60%; left: 70%; }
+.b3 { background: #ff0000; top: 40%; left: 40%; }
 
 @keyframes floatBlob {
     0% { transform: translate(0,0); }
@@ -48,11 +46,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    padding: 50px;
+    padding: 60px 20px;
 }
 
 .effect-card {
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
@@ -61,4 +59,11 @@
 
 .effect-card:hover {
     transform: translateY(-10px);
+}
+
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 👈 push it back */
 }
